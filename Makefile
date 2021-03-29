@@ -1,12 +1,12 @@
-CFLAGS=-c -Wall -O0 
+CFLAGS=-c -Wall -O0
 
-all: icon_tool
+all: icopack
 
-icon_tool: main.o 
-	$(CC) main.o -o icon_tool 
+icopack: main.o
+	$(CC) main.o -o icopack
 
 main.o: main.c
 	$(CC) $(CFLAGS) main.c
 
 clean:
-	rm -rf main.o icon_tool
+	rm -rf main.o icopack
